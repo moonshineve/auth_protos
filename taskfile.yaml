@@ -1,0 +1,12 @@
+version: '3'
+
+silent: true
+
+tasks:
+  generate:
+    aliases:
+      - gen
+    desc: "Generate code from proto files"
+    cmds:
+      - protoc -I=auth --go_out=./gen --go_opt=paths=source_relative --go-grpc_out=./gen --go-grpc_opt=paths=source_relative auth/auth.proto
+      - echo "Generated code from proto file"

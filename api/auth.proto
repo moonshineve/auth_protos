@@ -13,8 +13,14 @@ service Auth {
 }
 
 message RegisterRequest {
-    string email = 1 [(buf.validate.field).string.email = true];
-    string password = 2;
+    string email = 1 [
+        (buf.validate.field).string.email = true,
+        (buf.validate.field).string.max_len = 320 
+    ];
+    string password = 2 [
+        (buf.validate.field).string.min_len = 12,
+        (buf.validate.field).string.max_len = 256
+    ];
 }
 
 message RegisterResponse {
@@ -22,8 +28,14 @@ message RegisterResponse {
 }
 
 message LoginRequest {
-    string email = 1;
-    string password = 2;
+    string email = 1; [
+        (buf.validate.field).string.email = true,
+        (buf.validate.field).string.max_len = 320 
+    ];
+    string password = 2; [
+        (buf.validate.field).string.min_len = 12,
+        (buf.validate.field).string.max_len = 256
+    ];
     int32 app_id = 3;
 }
 
