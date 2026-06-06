@@ -314,15 +314,19 @@ var File_api_auth_proto protoreflect.FileDescriptor
 
 const file_api_auth_proto_rawDesc = "" +
 	"\n" +
-	"\x0eapi/auth.proto\x12\x03api\x1a\x1bbuf/validate/validate.proto\"L\n" +
-	"\x0fRegisterRequest\x12\x1d\n" +
-	"\x05email\x18\x01 \x01(\tB\a\xbaH\x04r\x02`\x01R\x05email\x12\x1a\n" +
-	"\bpassword\x18\x02 \x01(\tR\bpassword\"+\n" +
+	"\x0eapi/auth.proto\x12\x03api\x1a\x1bbuf/validate/validate.proto\"[\n" +
+	"\x0fRegisterRequest\x12 \n" +
+	"\x05email\x18\x01 \x01(\tB\n" +
+	"\xbaH\ar\x05\x18\xc0\x02`\x01R\x05email\x12&\n" +
+	"\bpassword\x18\x02 \x01(\tB\n" +
+	"\xbaH\ar\x05\x10\f\x18\x80\x02R\bpassword\"+\n" +
 	"\x10RegisterResponse\x12\x17\n" +
-	"\auser_id\x18\x01 \x01(\x03R\x06userId\"W\n" +
-	"\fLoginRequest\x12\x14\n" +
-	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
-	"\bpassword\x18\x02 \x01(\tR\bpassword\x12\x15\n" +
+	"\auser_id\x18\x01 \x01(\x03R\x06userId\"o\n" +
+	"\fLoginRequest\x12 \n" +
+	"\x05email\x18\x01 \x01(\tB\n" +
+	"\xbaH\ar\x05\x18\xc0\x02`\x01R\x05email\x12&\n" +
+	"\bpassword\x18\x02 \x01(\tB\n" +
+	"\xbaH\ar\x05\x10\f\x18\x80\x02R\bpassword\x12\x15\n" +
 	"\x06app_id\x18\x03 \x01(\x05R\x05appId\"%\n" +
 	"\rLoginResponse\x12\x14\n" +
 	"\x05token\x18\x01 \x01(\tR\x05token\")\n" +
