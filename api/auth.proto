@@ -1,8 +1,10 @@
 syntax = "proto3";
 
-package auth;
+package api;
 
-option go_package = "eve.auth;authv1";
+import "buf/validate/validate.proto"; 
+
+option go_package = ".;api";
 
 service Auth {
     rpc Register (RegisterRequest) returns (RegisterResponse);
@@ -11,7 +13,7 @@ service Auth {
 }
 
 message RegisterRequest {
-    string email = 1;
+    string email = 1 [(buf.validate.field).string.email = true];
     string password = 2;
 }
 
